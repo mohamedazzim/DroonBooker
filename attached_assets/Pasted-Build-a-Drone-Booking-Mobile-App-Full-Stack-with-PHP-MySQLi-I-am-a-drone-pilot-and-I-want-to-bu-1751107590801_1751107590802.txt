@@ -1,0 +1,91 @@
+Build a Drone Booking Mobile App (Full Stack with PHP + MySQLi)
+I am a drone pilot, and I want to build a full-stack mobile app using PHP (with MySQLi) as the backend. The app should allow the public to install it on Android or iOS and make service bookings. Here's the complete requirement:
+
+👤 User Registration (on first open)
+Ask the user to enter:
+
+Full Name
+
+Email
+
+Phone Number
+
+Save this data in the MySQL database (users table).
+
+Identify future sessions using the stored user ID or phone number.
+
+🚁 Drone Services Selection
+Let the user choose one or more categories of drone services:
+
+Videography
+
+Photoshoot
+
+Agriculture
+
+Surveillance
+
+Inspection
+
+Custom (optional input)
+
+Store service types in a services table with pricing (per hour).
+
+📍 Booking Page
+After selecting service type:
+
+Ask the user to pin or type the location
+
+Choose date and time for the service
+
+Specify duration in hours
+
+💰 Pricing & Booking
+Price per hour is fetched from the backend (services table).
+
+PHP backend calculates the total cost:
+price_per_hour * number_of_hours
+
+Store booking details in a bookings table:
+
+user_id, service_id, location, date, time, duration, total_cost
+
+📋 "My Bookings" Page
+Show all the user's previous and upcoming bookings.
+
+Include service type, location, date/time, duration, and cost.
+
+🔧 Admin Panel (Web-based PHP Panel)
+Create a simple admin dashboard in PHP with Bootstrap:
+
+Add/Edit/Delete Drone Service Categories
+
+Set per-hour pricing
+
+View all bookings
+
+View user list
+
+🧱 Tech Stack
+Layer	Technology
+Backend	PHP (procedural or OOP) with MySQLi
+Database	MySQL (with tables for users, services, bookings)
+Frontend	React Native or Cordova-based mobile app
+API Format	REST API using PHP endpoints
+Admin Panel	PHP + HTML + Bootstrap (for web)
+Hosting	Any server that supports PHP & MySQL (e.g. cPanel, VPS)
+
+📱 Mobile App Flow (Frontend)
+Built using React Native or Cordova + HTML/JS
+
+On app open:
+
+Show user registration (name, email, phone)
+
+Then:
+
+Service selection → location + time → calculate price → confirm booking
+
+Show:
+
+"My Bookings" page listing all their service records
